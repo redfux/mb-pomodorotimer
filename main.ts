@@ -3,6 +3,7 @@ input.onButtonPressed(Button.A, function () {
 })
 let timer = 0
 timer = 0
+basic.showString("Go")
 basic.forever(function () {
     timer += 1
     if (timer <= 25) {
@@ -11,7 +12,11 @@ basic.forever(function () {
         25
         )
     } else {
-        basic.showIcon(IconNames.Yes)
+        for (let index = 0; index < 3; index++) {
+            basic.clearScreen()
+            basic.pause(100)
+            basic.showIcon(IconNames.Yes)
+        }
     }
     basic.pause(60000)
 })
