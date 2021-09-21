@@ -6,8 +6,8 @@ timer = 0
 basic.forever(function () {
     timer += 1
     led.plotBarGraph(
-    0,
-    timer
+    timer,
+    25
     )
     if (timer >= 25) {
         basic.showIcon(IconNames.Yes)
